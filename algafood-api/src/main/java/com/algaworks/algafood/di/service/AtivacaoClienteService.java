@@ -9,12 +9,17 @@ import com.algaworks.algafood.di.notificacao.Notificador;
 @Component
 public class AtivacaoClienteService {
 
-	@Autowired
+	@Autowired(required = false)
 	private Notificador notificador;
 
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
-		this.notificador.notificar(cliente, "Seu cadastro no sistema está ativo!");
+
+		if (this.notificador != null) {
+			this.notificador.notificar(cliente, "Seu cadastro no sistema está ativo!");
+		} else {
+			System.out.println("Não existe notificador, mas cliente foi ativado!");
+		}
 	}
 
 }
