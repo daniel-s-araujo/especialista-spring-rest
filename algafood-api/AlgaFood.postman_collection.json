@@ -10,7 +10,13 @@
 			"name": "Cozinhas - Lista",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "localhost:8080/cozinhas",
 					"host": [
