@@ -29,6 +29,31 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Cozinhas - Busca",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/cozinhas/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cozinhas",
+						"1"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
